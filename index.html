@@ -1,36 +1,175 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Parallax mit Kästen</title>
+  <title>Meine Website</title>
+  <meta name="description" content="Eine moderne, responsive Website-Vorlage." />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <div class="content-wrapper">
-    <h1>Dein Inhalt oben</h1>
-    <p>Scroll runter, um die Kästen zu sehen.</p>
-  </div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#">
+        <span class="logo-mark" aria-hidden="true">●</span>
+        <span>MeineWebsite</span>
+      </a>
 
-  <div class="boxes-container" id="boxes">
-    <div class="box">
-      <img src="Bild1.png" alt="Bild 1" />
-      <div class="box-text">Youtube</div>
+      <nav class="nav" aria-label="Hauptnavigation">
+        <a href="#features">Features</a>
+        <a href="#about">Über</a>
+        <a href="#contact">Kontakt</a>
+        <a class="btn btn-small" href="#contact">Loslegen</a>
+      </nav>
     </div>
-    <div class="box">
-      <img src="Bild2.png" alt="Bild 2" />
-      <div class="box-text">video</div>
-    </div>
-    <div class="box">
-      <img src="Bild3.png" alt="Bild 3" />
-      <div class="box-text">Autos</div>
-    </div>
-    <div class="box">
-      <img src="Bild4.png" alt="Bild 4" />
-      <div class="box-text">Über mich</div>
-    </div>
-  </div>
+  </header>
 
-  <script src="script.js"></script>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="pill">Neu • Schnell • Responsiv</p>
+          <h1>Eine saubere Website-Vorlage, die einfach gut aussieht.</h1>
+          <p class="lead">
+            Perfekt als Startpunkt für Portfolio, Landingpage oder kleines Business.
+            Ohne Frameworks – nur HTML & CSS.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn" href="#contact">Projekt starten</a>
+            <a class="btn btn-ghost" href="#features">Mehr erfahren</a>
+          </div>
+
+          <div class="hero-stats" role="list">
+            <div class="stat" role="listitem">
+              <span class="stat-value">100%</span>
+              <span class="stat-label">Responsive</span>
+            </div>
+            <div class="stat" role="listitem">
+              <span class="stat-value">&lt; 5</span>
+              <span class="stat-label">Sek. Setup</span>
+            </div>
+            <div class="stat" role="listitem">
+              <span class="stat-value">0</span>
+              <span class="stat-label">Abhängigkeiten</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card" aria-label="Vorschaukarte">
+          <div class="card">
+            <div class="card-top">
+              <div class="dot red"></div>
+              <div class="dot yellow"></div>
+              <div class="dot green"></div>
+            </div>
+            <div class="card-body">
+              <h3>Beispiel-Sektion</h3>
+              <p>
+                Tausche Texte, Farben und Sections aus – fertig.
+              </p>
+              <ul class="checklist">
+                <li>Schöne Typografie</li>
+                <li>Button-Styles</li>
+                <li>Grid-Layout</li>
+              </ul>
+              <a class="btn btn-small" href="#features">Features ansehen</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-bg" aria-hidden="true"></div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Features</h2>
+          <p class="muted">Alles, was du für eine solide Startseite brauchst.</p>
+        </div>
+
+        <div class="grid">
+          <article class="tile">
+            <h3>Modernes Design</h3>
+            <p>Saubere Abstände, weiche Schatten, angenehme Farben.</p>
+          </article>
+          <article class="tile">
+            <h3>Mobile-First</h3>
+            <p>Sieht auf Handy, Tablet und Desktop gut aus.</p>
+          </article>
+          <article class="tile">
+            <h3>Einfach anpassbar</h3>
+            <p>Farben und Layouts über CSS-Variablen ändern.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section alt">
+      <div class="container about-grid">
+        <div>
+          <h2>Über diese Vorlage</h2>
+          <p class="muted">
+            Diese Seite ist bewusst minimal gehalten. Du kannst sie als Portfolio,
+            Produkt-Landingpage oder Projektseite verwenden.
+          </p>
+          <p>
+            Tipp: Passe oben in <code>:root</code> die Farben an, dann sieht alles
+            direkt wie “deine Marke” aus.
+          </p>
+        </div>
+
+        <div class="quote">
+          <p>“Simpel, aber professionell – genau so muss ein Starter-Template sein.”</p>
+          <span class="muted">— jemand, der schnell starten wollte</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="cta">
+          <div>
+            <h2>Kontakt</h2>
+            <p class="muted">Schreib mir kurz – ich melde mich.</p>
+          </div>
+
+          <form class="form" action="#" method="post">
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" placeholder="Max Mustermann" required />
+            </label>
+            <label>
+              <span>E-Mail</span>
+              <input type="email" name="email" placeholder="max@mail.de" required />
+            </label>
+            <label class="full">
+              <span>Nachricht</span>
+              <textarea name="message" rows="4" placeholder="Worum geht’s?" required></textarea>
+            </label>
+
+            <button class="btn" type="submit">Senden</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> MeineWebsite</p>
+      <div class="footer-links">
+        <a href="#features">Features</a>
+        <a href="#about">Über</a>
+        <a href="#contact">Kontakt</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
