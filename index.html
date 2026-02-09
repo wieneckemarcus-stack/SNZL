@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Meine Website</title>
-  <meta name="description" content="Eine moderne, responsive Website-Vorlage." />
+  <title>SNZL • Offizielle Website</title>
+  <meta name="description" content="Offizielle Website von SNZL – Videos, Upload-Plan, Playlists und alle wichtigen Links." />
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -12,158 +12,123 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="logo" href="#">
-        <span class="logo-mark" aria-hidden="true">●</span>
-        <span>MeineWebsite</span>
+        <span class="logo-mark"></span>
+        <span class="logo-text">SNZL</span>
       </a>
 
-      <nav class="nav" aria-label="Hauptnavigation">
-        <a href="#features">Features</a>
-        <a href="#about">Über</a>
-        <a href="#contact">Kontakt</a>
-        <a class="btn btn-small" href="#contact">Loslegen</a>
+      <nav class="nav">
+        <a href="#videos">Videos</a>
+        <a href="#playlists">Playlists</a>
+        <a href="#schedule">Upload-Plan</a>
+        <a href="#links">Links</a>
+        <a class="btn btn-small" href="#support">Support</a>
       </nav>
     </div>
   </header>
 
   <main>
+    <!-- HERO -->
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-text">
-          <p class="pill">Neu • Schnell • Responsiv</p>
-          <h1>Eine saubere Website-Vorlage, die einfach gut aussieht.</h1>
+          <p class="pill">Offizieller SNZL Hub</p>
+          <h1>Alles rund um meinen Kanal an einem Ort.</h1>
           <p class="lead">
-            Perfekt als Startpunkt für Portfolio, Landingpage oder kleines Business.
-            Ohne Frameworks – nur HTML & CSS.
+            Hier findest du neue Videos, Playlists, meinen Upload-Plan und alle wichtigen Community-Links.
           </p>
 
           <div class="hero-actions">
-            <a class="btn" href="#contact">Projekt starten</a>
-            <a class="btn btn-ghost" href="#features">Mehr erfahren</a>
+            <a class="btn" href="#videos">Neuestes Video</a>
+            <a class="btn btn-ghost" href="#links">Community</a>
           </div>
 
-          <div class="hero-stats" role="list">
-            <div class="stat" role="listitem">
-              <span class="stat-value">100%</span>
-              <span class="stat-label">Responsive</span>
-            </div>
-            <div class="stat" role="listitem">
-              <span class="stat-value">&lt; 5</span>
-              <span class="stat-label">Sek. Setup</span>
-            </div>
-            <div class="stat" role="listitem">
-              <span class="stat-value">0</span>
-              <span class="stat-label">Abhängigkeiten</span>
-            </div>
+          <div class="badges">
+            <span class="badge">🎥 Videos</span>
+            <span class="badge">🔥 Trends</span>
+            <span class="badge">🎮 Entertainment</span>
+            <span class="badge">⚡ Shorts</span>
           </div>
         </div>
 
-        <div class="hero-card" aria-label="Vorschaukarte">
-          <div class="card">
-            <div class="card-top">
-              <div class="dot red"></div>
-              <div class="dot yellow"></div>
-              <div class="dot green"></div>
-            </div>
-            <div class="card-body">
-              <h3>Beispiel-Sektion</h3>
-              <p>
-                Tausche Texte, Farben und Sections aus – fertig.
-              </p>
-              <ul class="checklist">
-                <li>Schöne Typografie</li>
-                <li>Button-Styles</li>
-                <li>Grid-Layout</li>
-              </ul>
-              <a class="btn btn-small" href="#features">Features ansehen</a>
-            </div>
+        <!-- NEUESTES VIDEO -->
+        <div class="card featured" id="videos">
+          <div class="card-top">
+            <h2>Neuestes Video</h2>
+            <p class="muted">Direkt vom Kanal SNZL</p>
+          </div>
+
+          <div class="video-frame">
+            <!-- ERSETZE VIDEO_ID mit der ID deines neuesten Videos -->
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/VIDEO_ID"
+              title="Neuestes Video von SNZL"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <div class="card-actions">
+            <a class="btn btn-small" href="https://www.youtube.com/@SNZL" target="_blank">Kanal besuchen</a>
           </div>
         </div>
       </div>
-
-      <div class="hero-bg" aria-hidden="true"></div>
     </section>
 
-    <section id="features" class="section">
+    <!-- PLAYLISTS -->
+    <section id="playlists" class="section">
       <div class="container">
-        <div class="section-head">
-          <h2>Features</h2>
-          <p class="muted">Alles, was du für eine solide Startseite brauchst.</p>
-        </div>
-
+        <h2>Beliebte Playlists</h2>
         <div class="grid">
-          <article class="tile">
-            <h3>Modernes Design</h3>
-            <p>Saubere Abstände, weiche Schatten, angenehme Farben.</p>
-          </article>
-          <article class="tile">
-            <h3>Mobile-First</h3>
-            <p>Sieht auf Handy, Tablet und Desktop gut aus.</p>
-          </article>
-          <article class="tile">
-            <h3>Einfach anpassbar</h3>
-            <p>Farben und Layouts über CSS-Variablen ändern.</p>
-          </article>
+          <div class="tile">🎮 Gaming Highlights</div>
+          <div class="tile">🔥 Meistgesehene Videos</div>
+          <div class="tile">⚡ Shorts & Clips</div>
         </div>
       </div>
     </section>
 
-    <section id="about" class="section alt">
-      <div class="container about-grid">
-        <div>
-          <h2>Über diese Vorlage</h2>
-          <p class="muted">
-            Diese Seite ist bewusst minimal gehalten. Du kannst sie als Portfolio,
-            Produkt-Landingpage oder Projektseite verwenden.
-          </p>
-          <p>
-            Tipp: Passe oben in <code>:root</code> die Farben an, dann sieht alles
-            direkt wie “deine Marke” aus.
-          </p>
-        </div>
-
-        <div class="quote">
-          <p>“Simpel, aber professionell – genau so muss ein Starter-Template sein.”</p>
-          <span class="muted">— jemand, der schnell starten wollte</span>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
+    <!-- UPLOAD PLAN -->
+    <section id="schedule" class="section alt">
       <div class="container">
-        <div class="cta">
-          <div>
-            <h2>Kontakt</h2>
-            <p class="muted">Schreib mir kurz – ich melde mich.</p>
-          </div>
-
-          <form class="form" action="#" method="post">
-            <label>
-              <span>Name</span>
-              <input type="text" name="name" placeholder="Max Mustermann" required />
-            </label>
-            <label>
-              <span>E-Mail</span>
-              <input type="email" name="email" placeholder="max@mail.de" required />
-            </label>
-            <label class="full">
-              <span>Nachricht</span>
-              <textarea name="message" rows="4" placeholder="Worum geht’s?" required></textarea>
-            </label>
-
-            <button class="btn" type="submit">Senden</button>
-          </form>
+        <h2>Upload-Plan</h2>
+        <div class="schedule-box">
+          <div>📅 Neue Videos: <strong>Mittwoch & Samstag</strong></div>
+          <div>🔴 Livestreams: <strong>1× pro Woche</strong></div>
+          <div>⚡ Shorts: <strong>Unregelmäßig</strong></div>
         </div>
+      </div>
+    </section>
+
+    <!-- LINKS -->
+    <section id="links" class="section">
+      <div class="container">
+        <h2>Community & Socials</h2>
+        <div class="links-grid">
+          <a class="link-card" href="https://www.youtube.com/@SNZL" target="_blank">▶ YouTube</a>
+          <a class="link-card" href="#">💬 Discord</a>
+          <a class="link-card" href="#">📸 Instagram</a>
+          <a class="link-card" href="#">🎵 TikTok</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUPPORT -->
+    <section id="support" class="section alt">
+      <div class="container support-box">
+        <h2>Support SNZL</h2>
+        <p>Wenn dir der Content gefällt, unterstütze den Kanal ❤️</p>
+        <a class="btn" href="#">Jetzt unterstützen</a>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="container footer-inner">
-      <p>© <span id="year"></span> MeineWebsite</p>
+      <p>© <span id="year"></span> SNZL</p>
       <div class="footer-links">
-        <a href="#features">Features</a>
-        <a href="#about">Über</a>
-        <a href="#contact">Kontakt</a>
+        <a href="#videos">Videos</a>
+        <a href="#links">Links</a>
+        <a href="#support">Support</a>
       </div>
     </div>
   </footer>
