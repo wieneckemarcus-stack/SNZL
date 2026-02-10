@@ -1,140 +1,248 @@
 <!doctype html>
 <html lang="de">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SNZL • Offizielle Website</title>
-  <meta name="description" content="Offizielle Website von SNZL – Videos, Upload-Plan, Playlists und alle wichtigen Links." />
-  <link rel="stylesheet" href="style.css" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Deine Website</title>
+    <meta name="description" content="Apple-inspirierte Landingpage Vorlage" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="#">
-        <span class="logo-mark"></span>
-        <span class="logo-text">SNZL</span>
-      </a>
+  <body>
+    <!-- Top Navigation -->
+    <header class="topbar">
+      <div class="container topbar__inner">
+        <a class="brand" href="#" aria-label="Startseite"></a>
 
-      <nav class="nav">
-        <a href="#videos">Videos</a>
-        <a href="#playlists">Playlists</a>
-        <a href="#schedule">Upload-Plan</a>
-        <a href="#links">Links</a>
-        <a class="btn btn-small" href="#support">Support</a>
-      </nav>
-    </div>
-  </header>
+        <nav class="nav" aria-label="Hauptnavigation">
+          <a href="#produkte">Produkte</a>
+          <a href="#features">Features</a>
+          <a href="#galerie">Galerie</a>
+          <a href="#kontakt">Kontakt</a>
+        </nav>
 
-  <main>
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-text">
-          <p class="pill">Offizieller SNZL Hub</p>
-          <h1>Alles rund um meinen Kanal an einem Ort.</h1>
-          <p class="lead">
-            Hier findest du neue Videos, Playlists, meinen Upload-Plan und alle wichtigen Community-Links.
-          </p>
-
-          <div class="hero-actions">
-            <a class="btn" href="#videos">Neuestes Video</a>
-            <a class="btn btn-ghost" href="#links">Community</a>
-          </div>
-
-          <div class="badges">
-            <span class="badge">🎥 Videos</span>
-            <span class="badge">🔥 Trends</span>
-            <span class="badge">🎮 Entertainment</span>
-            <span class="badge">⚡ Shorts</span>
-          </div>
+        <div class="topbar__actions">
+          <a class="link subtle" href="#kontakt">Support</a>
+          <a class="btn btn--small" href="#kontakt">Kaufen</a>
         </div>
 
-        <!-- NEUESTES VIDEO -->
-        <div class="card featured" id="videos">
-          <div class="card-top">
-            <h2>Neuestes Video</h2>
-            <p class="muted">Direkt vom Kanal SNZL</p>
+        <button class="burger" aria-label="Menü öffnen" aria-expanded="false">
+          <span></span><span></span>
+        </button>
+      </div>
+
+      <!-- Mobile Menu (einfach per CSS/JS erweiterbar) -->
+      <div class="mobile-nav container" hidden>
+        <a href="#produkte">Produkte</a>
+        <a href="#features">Features</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#kontakt">Kontakt</a>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <main>
+      <section class="hero">
+        <div class="container hero__grid">
+          <div class="hero__content">
+            <p class="eyebrow">NEU</p>
+            <h1 class="headline">
+              Deine große Headline<br />
+              in Apple-Style
+            </h1>
+            <p class="subhead">
+              Kurzer Beschreibungstext. Sehr klar, wenige Worte, viel Wirkung. Hier
+              kannst du dein Produkt, Portfolio oder Service vorstellen.
+            </p>
+
+            <div class="hero__cta">
+              <a class="btn" href="#produkte">Mehr erfahren</a>
+              <a class="link" href="#galerie">Galerie ansehen →</a>
+            </div>
+
+            <div class="hero__meta">
+              <div class="pill">Kostenloser Versand</div>
+              <div class="pill">14 Tage Rückgabe</div>
+              <div class="pill">Sichere Zahlung</div>
+            </div>
           </div>
 
-          <div class="video-frame">
-            <!-- ERSETZE VIDEO_ID mit der ID deines neuesten Videos -->
-            <iframe
-              src="https://www.youtube-nocookie.com/embed/VIDEO_ID"
-              title="Neuestes Video von SNZL"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
-          </div>
-
-          <div class="card-actions">
-            <a class="btn btn-small" href="https://www.youtube.com/@SNZL" target="_blank">Kanal besuchen</a>
+          <div class="hero__media">
+            <!-- Tausche src gegen dein Bild aus -->
+            <img
+              src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=80"
+              alt="Produktbild Platzhalter"
+              loading="eager"
+            />
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- PLAYLISTS -->
-    <section id="playlists" class="section">
-      <div class="container">
-        <h2>Beliebte Playlists</h2>
-        <div class="grid">
-          <div class="tile">🎮 Gaming Highlights</div>
-          <div class="tile">🔥 Meistgesehene Videos</div>
-          <div class="tile">⚡ Shorts & Clips</div>
+      <!-- Produkt-Teaser -->
+      <section id="produkte" class="section">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="title">Produkte</h2>
+            <p class="lead">
+              Drei klare Kacheln. Perfekt für Angebote, Kategorien oder Projekte.
+            </p>
+          </div>
+
+          <div class="cards">
+            <article class="card">
+              <div class="card__media">
+                <img
+                  src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
+                  alt="Platzhalter 1"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card__body">
+                <h3>Produkt / Projekt 1</h3>
+                <p>1–2 Sätze. Fokus auf Nutzen, nicht auf Features.</p>
+                <a class="link" href="#">Details →</a>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__media">
+                <img
+                  src="https://images.unsplash.com/photo-1518444028785-8f1396b7f0f2?auto=format&fit=crop&w=1200&q=80"
+                  alt="Platzhalter 2"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card__body">
+                <h3>Produkt / Projekt 2</h3>
+                <p>Minimalistisch, hochwertig, viel Weißraum.</p>
+                <a class="link" href="#">Details →</a>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__media">
+                <img
+                  src="https://images.unsplash.com/photo-1526378722445-4c2f31b5a6d7?auto=format&fit=crop&w=1200&q=80"
+                  alt="Platzhalter 3"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card__body">
+                <h3>Produkt / Projekt 3</h3>
+                <p>Ein CTA-Link reicht oft. Apple macht’s auch so.</p>
+                <a class="link" href="#">Details →</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Feature Section -->
+      <section id="features" class="section section--soft">
+        <div class="container">
+          <div class="split">
+            <div>
+              <h2 class="title">Features, die man sofort versteht.</h2>
+              <p class="lead">
+                Dieser Bereich funktioniert super für Produktargumente oder
+                „Warum wir?“. Große Typo, kurze Sätze.
+              </p>
+              <ul class="list">
+                <li><strong>Feature 1:</strong> Kurz und konkret.</li>
+                <li><strong>Feature 2:</strong> Ein Satz, der Nutzen erklärt.</li>
+                <li><strong>Feature 3:</strong> Keine Buzzwords, nur Klarheit.</li>
+              </ul>
+              <a class="btn" href="#kontakt">Jetzt anfragen</a>
+            </div>
+
+            <div class="device">
+              <div class="device__bar"></div>
+              <div class="device__screen">
+                <img
+                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80"
+                  alt="Screenshot/Mockup Platzhalter"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Galerie -->
+      <section id="galerie" class="section">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="title">Galerie</h2>
+            <p class="lead">Bilder in einem cleanen Grid. Tausche einfach die URLs.</p>
+          </div>
+
+          <div class="grid">
+            <img
+              src="https://images.unsplash.com/photo-1520975661595-6453be3f7070?auto=format&fit=crop&w=1200&q=80"
+              alt="Galerie 1"
+              loading="lazy"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80"
+              alt="Galerie 2"
+              loading="lazy"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80"
+              alt="Galerie 3"
+              loading="lazy"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1200&q=80"
+              alt="Galerie 4"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section id="kontakt" class="cta">
+        <div class="container cta__inner">
+          <div>
+            <h2 class="title">Bereit?</h2>
+            <p class="lead">
+              Kontakttext. Sag kurz, was passieren soll, wenn man klickt.
+            </p>
+          </div>
+          <div class="cta__actions">
+            <a class="btn" href="mailto:hello@deine-domain.de">E-Mail schreiben</a>
+            <a class="btn btn--ghost" href="#">Termin buchen</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p class="fineprint">© <span id="year"></span> Deine Marke. Alle Rechte vorbehalten.</p>
+        <div class="footer__links">
+          <a href="#">Impressum</a>
+          <a href="#">Datenschutz</a>
+          <a href="#">AGB</a>
         </div>
       </div>
-    </section>
+    </footer>
 
-    <!-- UPLOAD PLAN -->
-    <section id="schedule" class="section alt">
-      <div class="container">
-        <h2>Upload-Plan</h2>
-        <div class="schedule-box">
-          <div>📅 Neue Videos: <strong>Mittwoch & Samstag</strong></div>
-          <div>🔴 Livestreams: <strong>1× pro Woche</strong></div>
-          <div>⚡ Shorts: <strong>Unregelmäßig</strong></div>
-        </div>
-      </div>
-    </section>
+    <script>
+      // Mini-UX: Jahr im Footer + optionales Mobile-Menü
+      document.getElementById("year").textContent = new Date().getFullYear();
 
-    <!-- LINKS -->
-    <section id="links" class="section">
-      <div class="container">
-        <h2>Community & Socials</h2>
-        <div class="links-grid">
-          <a class="link-card" href="https://www.youtube.com/@SNZL" target="_blank">▶ YouTube</a>
-          <a class="link-card" href="#">💬 Discord</a>
-          <a class="link-card" href="#">📸 Instagram</a>
-          <a class="link-card" href="#">🎵 TikTok</a>
-        </div>
-      </div>
-    </section>
+      const burger = document.querySelector(".burger");
+      const mobileNav = document.querySelector(".mobile-nav");
 
-    <!-- SUPPORT -->
-    <section id="support" class="section alt">
-      <div class="container support-box">
-        <h2>Support SNZL</h2>
-        <p>Wenn dir der Content gefällt, unterstütze den Kanal ❤️</p>
-        <a class="btn" href="#">Jetzt unterstützen</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> SNZL</p>
-      <div class="footer-links">
-        <a href="#videos">Videos</a>
-        <a href="#links">Links</a>
-        <a href="#support">Support</a>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-</body>
+      burger?.addEventListener("click", () => {
+        const expanded = burger.getAttribute("aria-expanded") === "true";
+        burger.setAttribute("aria-expanded", String(!expanded));
+        mobileNav.hidden = expanded;
+      });
+    </script>
+  </body>
 </html>
