@@ -3,236 +3,288 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Deine Website</title>
-    <meta name="description" content="Apple-inspirierte Landingpage Vorlage" />
+    <title>Dein Blog</title>
+    <meta name="description" content="Apple-inspirierter Blog" />
     <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
-    <!-- Top Navigation -->
+    <!-- Sticky Topbar -->
     <header class="topbar">
       <div class="container topbar__inner">
         <a class="brand" href="#" aria-label="Startseite"></a>
 
-        <nav class="nav" aria-label="Hauptnavigation">
-          <a href="#produkte">Produkte</a>
-          <a href="#features">Features</a>
-          <a href="#galerie">Galerie</a>
-          <a href="#kontakt">Kontakt</a>
+        <nav class="nav" aria-label="Navigation">
+          <a href="#posts">Artikel</a>
+          <a href="#themen">Themen</a>
+          <a href="#newsletter">Newsletter</a>
+          <a href="#about">Über</a>
         </nav>
 
-        <div class="topbar__actions">
-          <a class="link subtle" href="#kontakt">Support</a>
-          <a class="btn btn--small" href="#kontakt">Kaufen</a>
-        </div>
+        <div class="topbar__right">
+          <label class="search" aria-label="Suche">
+            <span class="search__icon">⌕</span>
+            <input type="search" placeholder="Suchen…" />
+          </label>
+          <a class="btn btn--small" href="#newsletter">Abonnieren</a>
 
-        <button class="burger" aria-label="Menü öffnen" aria-expanded="false">
-          <span></span><span></span>
-        </button>
+          <button class="burger" aria-label="Menü öffnen" aria-expanded="false">
+            <span></span><span></span>
+          </button>
+        </div>
       </div>
 
-      <!-- Mobile Menu (einfach per CSS/JS erweiterbar) -->
       <div class="mobile-nav container" hidden>
-        <a href="#produkte">Produkte</a>
-        <a href="#features">Features</a>
-        <a href="#galerie">Galerie</a>
-        <a href="#kontakt">Kontakt</a>
+        <a href="#posts">Artikel</a>
+        <a href="#themen">Themen</a>
+        <a href="#newsletter">Newsletter</a>
+        <a href="#about">Über</a>
       </div>
     </header>
 
-    <!-- Hero -->
     <main>
+      <!-- Hero / Blog Intro -->
       <section class="hero">
         <div class="container hero__grid">
           <div class="hero__content">
-            <p class="eyebrow">NEU</p>
-            <h1 class="headline">
-              Deine große Headline<br />
-              in Apple-Style
-            </h1>
+            <p class="eyebrow">BLOG</p>
+            <h1 class="headline">Klarer Blog. Apple-inspirierter Look.</h1>
             <p class="subhead">
-              Kurzer Beschreibungstext. Sehr klar, wenige Worte, viel Wirkung. Hier
-              kannst du dein Produkt, Portfolio oder Service vorstellen.
+              Kurze Beschreibung, worum es bei dir geht. Minimal, hochwertig,
+              easy zu lesen.
             </p>
 
-            <div class="hero__cta">
-              <a class="btn" href="#produkte">Mehr erfahren</a>
-              <a class="link" href="#galerie">Galerie ansehen →</a>
-            </div>
-
             <div class="hero__meta">
-              <div class="pill">Kostenloser Versand</div>
-              <div class="pill">14 Tage Rückgabe</div>
-              <div class="pill">Sichere Zahlung</div>
+              <span class="pill">Design</span>
+              <span class="pill">Tech</span>
+              <span class="pill">Notizen</span>
             </div>
           </div>
 
           <div class="hero__media">
-            <!-- Tausche src gegen dein Bild aus -->
+            <!-- Tausche gegen dein Bild -->
             <img
-              src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=80"
-              alt="Produktbild Platzhalter"
+              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1400&q=80"
+              alt="Hero Bild"
               loading="eager"
             />
           </div>
         </div>
       </section>
 
-      <!-- Produkt-Teaser -->
-      <section id="produkte" class="section">
+      <!-- Featured Post -->
+      <section class="section" id="posts">
         <div class="container">
           <div class="section__head">
-            <h2 class="title">Produkte</h2>
-            <p class="lead">
-              Drei klare Kacheln. Perfekt für Angebote, Kategorien oder Projekte.
-            </p>
+            <h2 class="title">Featured</h2>
+            <p class="lead">Ein Artikel groß, darunter der Rest als Grid.</p>
           </div>
 
+          <article class="featured">
+            <a class="featured__media" href="#artikel-demo" aria-label="Artikel öffnen">
+              <img
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80"
+                alt="Featured"
+                loading="lazy"
+              />
+            </a>
+            <div class="featured__body">
+              <div class="meta">
+                <span class="tag">Design</span>
+                <span class="dot">•</span>
+                <time datetime="2026-02-10">10. Feb 2026</time>
+                <span class="dot">•</span>
+                <span>6 min</span>
+              </div>
+
+              <h3 class="h2">
+                <a href="#artikel-demo">Wie du Inhalte schreibst, die man wirklich liest</a>
+              </h3>
+
+              <p class="excerpt">
+                Kurzfassung in 2–3 Sätzen. Apple-ish bedeutet: wenige Worte, viel
+                Struktur, starke Headlines.
+              </p>
+
+              <div class="row">
+                <a class="btn" href="#artikel-demo">Lesen</a>
+                <a class="link" href="#posts">Alle Artikel →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Post Grid -->
           <div class="cards">
             <article class="card">
-              <div class="card__media">
+              <a class="card__media" href="#artikel-demo">
                 <img
-                  src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
-                  alt="Platzhalter 1"
+                  src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1400&q=80"
+                  alt="Post 1"
                   loading="lazy"
                 />
-              </div>
+              </a>
               <div class="card__body">
-                <h3>Produkt / Projekt 1</h3>
-                <p>1–2 Sätze. Fokus auf Nutzen, nicht auf Features.</p>
-                <a class="link" href="#">Details →</a>
+                <div class="meta">
+                  <span class="tag">Tech</span>
+                  <span class="dot">•</span>
+                  <time datetime="2026-02-05">05. Feb 2026</time>
+                </div>
+                <h3><a href="#artikel-demo">Notizen zu Fokus, Routine und Klarheit</a></h3>
+                <p>Ein kurzer Teaser. 1–2 Sätze reichen.</p>
+                <a class="link" href="#artikel-demo">Lesen →</a>
               </div>
             </article>
 
             <article class="card">
-              <div class="card__media">
+              <a class="card__media" href="#artikel-demo">
                 <img
-                  src="https://images.unsplash.com/photo-1518444028785-8f1396b7f0f2?auto=format&fit=crop&w=1200&q=80"
-                  alt="Platzhalter 2"
+                  src="https://images.unsplash.com/photo-1520975661595-6453be3f7070?auto=format&fit=crop&w=1400&q=80"
+                  alt="Post 2"
                   loading="lazy"
                 />
-              </div>
+              </a>
               <div class="card__body">
-                <h3>Produkt / Projekt 2</h3>
-                <p>Minimalistisch, hochwertig, viel Weißraum.</p>
-                <a class="link" href="#">Details →</a>
+                <div class="meta">
+                  <span class="tag">Design</span>
+                  <span class="dot">•</span>
+                  <time datetime="2026-01-28">28. Jan 2026</time>
+                </div>
+                <h3><a href="#artikel-demo">Warum Weißraum dein bester Freund ist</a></h3>
+                <p>Weniger Layout-Stress. Mehr Lesbarkeit.</p>
+                <a class="link" href="#artikel-demo">Lesen →</a>
               </div>
             </article>
 
             <article class="card">
-              <div class="card__media">
+              <a class="card__media" href="#artikel-demo">
                 <img
-                  src="https://images.unsplash.com/photo-1526378722445-4c2f31b5a6d7?auto=format&fit=crop&w=1200&q=80"
-                  alt="Platzhalter 3"
+                  src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=80"
+                  alt="Post 3"
                   loading="lazy"
                 />
-              </div>
+              </a>
               <div class="card__body">
-                <h3>Produkt / Projekt 3</h3>
-                <p>Ein CTA-Link reicht oft. Apple macht’s auch so.</p>
-                <a class="link" href="#">Details →</a>
+                <div class="meta">
+                  <span class="tag">Notizen</span>
+                  <span class="dot">•</span>
+                  <time datetime="2026-01-12">12. Jan 2026</time>
+                </div>
+                <h3><a href="#artikel-demo">Die 3 besten Seitenstrukturen für Blogs</a></h3>
+                <p>Featured + Grid + klare Kategorien. Funktioniert fast immer.</p>
+                <a class="link" href="#artikel-demo">Lesen →</a>
               </div>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- Feature Section -->
-      <section id="features" class="section section--soft">
-        <div class="container">
-          <div class="split">
-            <div>
-              <h2 class="title">Features, die man sofort versteht.</h2>
-              <p class="lead">
-                Dieser Bereich funktioniert super für Produktargumente oder
-                „Warum wir?“. Große Typo, kurze Sätze.
-              </p>
-              <ul class="list">
-                <li><strong>Feature 1:</strong> Kurz und konkret.</li>
-                <li><strong>Feature 2:</strong> Ein Satz, der Nutzen erklärt.</li>
-                <li><strong>Feature 3:</strong> Keine Buzzwords, nur Klarheit.</li>
-              </ul>
-              <a class="btn" href="#kontakt">Jetzt anfragen</a>
-            </div>
-
-            <div class="device">
-              <div class="device__bar"></div>
-              <div class="device__screen">
-                <img
-                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80"
-                  alt="Screenshot/Mockup Platzhalter"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Galerie -->
-      <section id="galerie" class="section">
+      <!-- Topics -->
+      <section class="section section--soft" id="themen">
         <div class="container">
           <div class="section__head">
-            <h2 class="title">Galerie</h2>
-            <p class="lead">Bilder in einem cleanen Grid. Tausche einfach die URLs.</p>
+            <h2 class="title">Themen</h2>
+            <p class="lead">Kleine Chips/Kategorien, wie bei Apple klar und ruhig.</p>
           </div>
 
-          <div class="grid">
-            <img
-              src="https://images.unsplash.com/photo-1520975661595-6453be3f7070?auto=format&fit=crop&w=1200&q=80"
-              alt="Galerie 1"
-              loading="lazy"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80"
-              alt="Galerie 2"
-              loading="lazy"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80"
-              alt="Galerie 3"
-              loading="lazy"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1200&q=80"
-              alt="Galerie 4"
-              loading="lazy"
-            />
+          <div class="chips">
+            <a class="chip" href="#posts">Design</a>
+            <a class="chip" href="#posts">Tech</a>
+            <a class="chip" href="#posts">Notizen</a>
+            <a class="chip" href="#posts">Tutorials</a>
+            <a class="chip" href="#posts">Empfehlungen</a>
           </div>
         </div>
       </section>
 
-      <!-- CTA -->
-      <section id="kontakt" class="cta">
-        <div class="container cta__inner">
-          <div>
-            <h2 class="title">Bereit?</h2>
-            <p class="lead">
-              Kontakttext. Sag kurz, was passieren soll, wenn man klickt.
+      <!-- Newsletter -->
+      <section class="section" id="newsletter">
+        <div class="container">
+          <div class="newsletter">
+            <div>
+              <h2 class="title">Newsletter</h2>
+              <p class="lead">
+                1× pro Woche. Keine Spam-Versprechen. Apple-ish Copy: kurz & klar.
+              </p>
+            </div>
+            <form class="form" onsubmit="event.preventDefault(); alert('Demo: Formular an deinen Anbieter anbinden.');">
+              <input type="email" required placeholder="E-Mail Adresse" />
+              <button class="btn" type="submit">Abonnieren</button>
+            </form>
+            <p class="fineprint">
+              Hinweis: Für echtes E-Mail-Opt-in brauchst du z.B. Buttondown, Mailchimp etc.
             </p>
           </div>
-          <div class="cta__actions">
-            <a class="btn" href="mailto:hello@deine-domain.de">E-Mail schreiben</a>
-            <a class="btn btn--ghost" href="#">Termin buchen</a>
+        </div>
+      </section>
+
+      <!-- Article Demo (als Anker / Vorlage) -->
+      <section class="section section--article" id="artikel-demo">
+        <div class="container article">
+          <div class="article__head">
+            <div class="meta">
+              <span class="tag">Design</span>
+              <span class="dot">•</span>
+              <time datetime="2026-02-10">10. Feb 2026</time>
+              <span class="dot">•</span>
+              <span>6 min</span>
+            </div>
+            <h2 class="headline headline--article">Artikel-Headline als Vorlage</h2>
+            <p class="subhead">
+              Unterzeile: Ein Satz, der erklärt, warum man den Artikel lesen sollte.
+            </p>
+          </div>
+
+          <figure class="article__hero">
+            <img
+              src="https://images.unsplash.com/photo-1518444028785-8f1396b7f0f2?auto=format&fit=crop&w=1600&q=80"
+              alt="Artikelbild"
+              loading="lazy"
+            />
+            <figcaption>Bildunterschrift optional.</figcaption>
+          </figure>
+
+          <div class="prose">
+            <p>
+              Das ist Fließtext. Apple-Feeling bekommst du durch: große Typo,
+              kurze Absätze, klare Zwischenüberschriften.
+            </p>
+
+            <h3>Zwischenüberschrift</h3>
+            <p>
+              Schreibe in kleinen Blöcken. Nutze Listen sparsam. Viel Weißraum.
+            </p>
+
+            <blockquote>
+              Ein starkes Zitat. Kurz. Präzise. Wie ein „Keynote“-Moment.
+            </blockquote>
+
+            <h3>Liste</h3>
+            <ul>
+              <li>Kurzer Punkt</li>
+              <li>Noch ein Punkt</li>
+              <li>Und ein dritter</li>
+            </ul>
+
+            <p>
+              Ende. <a href="#posts">Zurück nach oben</a>.
+            </p>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" id="about">
       <div class="container footer__inner">
-        <p class="fineprint">© <span id="year"></span> Deine Marke. Alle Rechte vorbehalten.</p>
+        <p class="fineprint">© <span id="year"></span> Dein Blog.</p>
         <div class="footer__links">
           <a href="#">Impressum</a>
           <a href="#">Datenschutz</a>
-          <a href="#">AGB</a>
+          <a href="#">Kontakt</a>
         </div>
       </div>
     </footer>
 
     <script>
-      // Mini-UX: Jahr im Footer + optionales Mobile-Menü
       document.getElementById("year").textContent = new Date().getFullYear();
 
       const burger = document.querySelector(".burger");
